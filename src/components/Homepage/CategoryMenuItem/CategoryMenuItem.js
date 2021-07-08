@@ -13,7 +13,7 @@ const CategoryMenuItem = () => {
    
     return (
         <div className="container">
-        <div className="d-flex justify-content-between" >
+        <div className="d-flex justify-content-between">
            <div onClick={() => setCategory('BREAD')} className="card" >
             <img src={Bread} className="card-img-top" alt="..."></img>
             <div className="categoryItemName">BREAD </div>   

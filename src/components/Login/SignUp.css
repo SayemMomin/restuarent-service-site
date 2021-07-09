@@ -45,6 +45,11 @@
     background-color: #8E8E8E;
     height: 1px;
 }
-.zIndex{
-    z-index: 1;
+.bottom{
+    color: #FFFFFF;
+    background-color: #260F3B;
+}
+.loginHeight{
+    height: 1000px;
+    margin-right: 0;
 }

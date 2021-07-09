@@ -90,8 +90,8 @@ const SignUp = () => {
                 <div className=" col-md-7">
                     <div className="d-flex justify-content-between logo-margin">
                     <Link to="/"><img className="signupLogo" src={logo} alt=""/></Link>
-                    <button href="/login" className="signUpBtn">Login</button>
-                    <button href="/login" className="signUpBtn">Sign Up</button>
+                    <button className="signUpBtn" onClick={() => setLoginForm(true)} style={{cursor: 'pointer'}}>Login</button>
+                    <button className="signUpBtn" onClick={() => setLoginForm(false)} style={{cursor: 'pointer'}}>Sign Up</button>
                     
                     </div>
                     <h3 className="mt-5">Unexpected guests?</h3>
@@ -114,7 +114,7 @@ const SignUp = () => {
                         <h4>Bogura</h4>
                         <h4>Cumilla</h4>
                     </div>
-                    <div className="row login-bg-clr mt-5 pt-5 ">
+                    <div className="row bottom mt-5 pt-5 ">
                         <div className="col-md-6 text-center">
                              <img src={minuOrderPic}  alt=""/>
                              <h4>No Minimum Order</h4>
@@ -131,7 +131,7 @@ const SignUp = () => {
                 
                 <div className="col-md-5 bg-frm-img">
                 <div className="bg-frm ml-5 p-4">
-                       {loginForm ? <Form className="" onSubmit={loginHandleSubmit}>
+                       {loginForm ? <Form className="loginHeight" onSubmit={loginHandleSubmit}>
                         <Form.Label className='font-weight-bold '>Login</Form.Label>
                     <Form.Group  id="email">
                         <Form.Control className="inputBox" type="email" name='email'  placeholder="Email" onBlur={handleOnBlur}  required />

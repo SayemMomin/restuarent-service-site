@@ -10,10 +10,6 @@ const MenuItemDetails = () => {
         const items = AllMenuItems.find(item => item.id === id)
         setCurrentItem(items)
         
-        if(currentItem.img){
-            setSelectedBigImg(currentItem.img)
-        }
-        
     }, [currentItem.name])
     console.log(currentItem);
     return (

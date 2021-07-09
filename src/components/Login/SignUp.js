@@ -156,7 +156,7 @@ const SignUp = () => {
                      
                     <Form.Label className='font-weight-bold'>Sign Up</Form.Label>
                         <Form.Group className="" id="">
-                        <Form.Control className="inputBox input-focus" type="text" name='name' onBlur={handleOnBlur} placeholder="Enter Name" />
+                        <Form.Control className="inputBox" type="text" name='name' onBlur={handleOnBlur} placeholder="Enter Name" />
                         </Form.Group>
                         <div className="ractangle"></div>
                     <Form.Group id="email">

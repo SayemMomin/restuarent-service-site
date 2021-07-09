@@ -6,7 +6,7 @@ const BreadMenuCard = ({data}) => {
     return (
         
         
-        <div  className="d-flex justify-content-center col-md-4 col-lg-3">  
+        <div  className="d-flex justify-content-center mt-2 col-md-4 col-lg-3">  
  <Link to={"item/"+id}>
            <div className="card" style={{width: "15rem"}}>
                 <img src={img} className="card-img-top" alt="..."></img>

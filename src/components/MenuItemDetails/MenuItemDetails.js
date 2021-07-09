@@ -5,9 +5,6 @@ import AllMenuItems from '../Homepage/BreadMenuItems/BreadMenuItemsData'
 const MenuItemDetails = () => {
     const [currentItem, setCurrentItem] = useState({});
     const {id} =useParams();
-    const [selectedBigImg, setSelectedBigImg] = useState(null);
-    const [isSuccess, setIsSuccess] = useState(false)
-    // const items = AllMenuItems.find(item => item.id === id)
     
     useEffect(()=> {
         const items = AllMenuItems.find(item => item.id === id)

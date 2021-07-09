@@ -8,11 +8,8 @@ import {
   Link
 } from "react-router-dom";
 import Homepage from './components/Homepage/Homepage';
-import Header from './components/Header/Header';
 import SignUp from './components/Login/SignUp';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute'
-import BreadMenuItems from './components/Homepage/BreadMenuItems/BreadMenuItems';
-import Check from './components/Check/Check';
 import MenuItemDetails from './components/MenuItemDetails/MenuItemDetails';
 
 
@@ -27,7 +24,6 @@ function App() {
    <UserContext.Provider value={[logginUser, setLogginUser]}>
      <CategoryContext.Provider value={[category, setCategory]}>
     <Router className="mt-3">
-      {/* <Header/> */}
       <Switch>
      <Route path="/login">
         <SignUp/>

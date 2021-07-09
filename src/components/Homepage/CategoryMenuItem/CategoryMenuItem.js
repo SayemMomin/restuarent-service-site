@@ -40,12 +40,6 @@ const CategoryMenuItem = () => {
         </div>
         </div>
 
-        // <div className="row">
-        //     {
-        //         CategoryItems.map((d, i)=> <CategoryMenuCard data={d} key={i} />)
-        //     }
-        // </div>
-
     );
 };
 

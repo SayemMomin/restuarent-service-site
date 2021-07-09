@@ -1,7 +1,10 @@
 import React, { useState, useContext } from 'react';
 import { Card, Form, Button } from 'react-bootstrap';
-import { useHistory, useLocation } from 'react-router-dom';
+import './SignUp.css'
+import { useHistory, useLocation, Link } from 'react-router-dom';
 import logo from '../Images/logo.png'
+import minuOrderPic from '../Images/order-pic.png'
+import liveOrderPic from '../Images/live-order-icon.png'
 import { UserContext } from '../../App';
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword, initializeLoginFramwork } from './LoginManager';
 
@@ -82,62 +85,67 @@ const SignUp = () => {
 
     return (
         <>
-            <div className="container">
+            <div className="container signUpBody">
             <div className="row">
-                <div className=" col-md-8">
-                    <div className="d-flex justify-content-between login-box-clr">
-                    <img className="logo" src={logo} alt=""/>
-                    <button href="/login" className="login-bg-clr">Login</button>
-                    <button href="/login" className="login-bg-clr">Sign Up</button>
+                <div className=" col-md-7">
+                    <div className="d-flex justify-content-between logo-margin">
+                    <Link to="/"><img className="signupLogo" src={logo} alt=""/></Link>
+                    <button href="/login" className="signUpBtn">Login</button>
+                    <button href="/login" className="signUpBtn">Sign Up</button>
                     
                     </div>
-                    <h3>Unexpected guests?</h3>
+                    <h3 className="mt-5">Unexpected guests?</h3>
                     <p>Order food from favourite restaurants near you</p>
-                    <Form className="d-flex">
-                    <Form.Control type="email" placeholder="Enter a location"  required /> 
-                    <Button  className="w-50" type="submit">
+                    <Form className="d-flex ">
+                    <Form.Control  type="text" placeholder="Enter a location"  required />
+                  
+        
+ 
+                    <Button  className="w-50 findBtn" type="submit">
                         FIND CODE
                     </Button>
                     </Form>
-                    <p>POPULAR CITIES IN BANGLADESH</p>
+                    <p className="mt-4">POPULAR CITIES IN BANGLADESH</p>
                     <div className="d-flex justify-content-between">
                         <h4>Dhaka</h4>
                         <h4>Sylhet</h4>
-                        <h4>Cattagram</h4>
+                        <h4>Khulna</h4>
+                        <h4>Cattogram</h4>
                         <h4>Bogura</h4>
                         <h4>Cumilla</h4>
                     </div>
-                    <div className="row login-bg-clr">
-                        <div className="col-md-6">
-                             <img src="" alt=""/>
+                    <div className="row login-bg-clr mt-5 pt-5 ">
+                        <div className="col-md-6 text-center">
+                             <img src={minuOrderPic}  alt=""/>
                              <h4>No Minimum Order</h4>
                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, molestiae? </p>
                         </div>
-                        <div className="col-md-6">
-                        <img src="" alt=""/>
+                        <div className="col-md-6 text-center">
+                        <img src={liveOrderPic} alt=""/>
                              <h4>Live Order Tracking</h4>
                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, molestiae? </p>
                         </div>
                     </div>
                 </div>
-                <div className="col-md-4">
                 
-                       {loginForm ? <Form onSubmit={loginHandleSubmit}>
-                        <Form.Label className='font-weight-bold'>Login</Form.Label>
-                    <Form.Group id="email">
-                        <Form.Control type="email" name='email'  placeholder="Email" onBlur={handleOnBlur}  required />
-                       
+                
+                <div className="col-md-5 bg-frm-img">
+                <div className="bg-frm ml-5 p-4">
+                       {loginForm ? <Form className="" onSubmit={loginHandleSubmit}>
+                        <Form.Label className='font-weight-bold '>Login</Form.Label>
+                    <Form.Group  id="email">
+                        <Form.Control className="inputBox" type="email" name='email'  placeholder="Email" onBlur={handleOnBlur}  required />
                     </Form.Group>
-                    
+                    <div className="ractangle"></div>
                     <Form.Group id="password">
-                       
-                        <Form.Control type="password" name='password' placeholder="Password" onBlur={handleOnBlur}  required />
+                        <Form.Control className="inputBox" type="password" name='password' placeholder="Password" onBlur={handleOnBlur}  required />
                     </Form.Group>
-                    <Button   className="w-100" type="submit">
+                    <div className="ractangle"></div>
+                    <Button   className="w-100 FrmBtnClr mt-2" type="submit">
                         Login
                     </Button>
                     <div className="w-100 text-center mt-2">
-                    Don't have an account? <a onClick={() => setLoginForm(false)} style={{color:'blue', cursor: 'pointer'}}>Sign Up</a>
+                    Don't have an account? <a className="signLoginClickBtn" onClick={() => setLoginForm(false)} style={{cursor: 'pointer'}}>Sign Up</a>
                     { user.success && <p style={{color: 'green'}}>User Login successfully</p>}
                     <p style={{color: 'red'}}>{user.error} </p>
                     </div>
@@ -147,33 +155,46 @@ const SignUp = () => {
                     <Form onSubmit={signupHandleSubmit}>
                      
                     <Form.Label className='font-weight-bold'>Sign Up</Form.Label>
-                        <Form.Group id="">
-                        <Form.Control type="text" name='name' onBlur={handleOnBlur} placeholder="Enter Name" />
+                        <Form.Group className="" id="">
+                        <Form.Control className="inputBox input-focus" type="text" name='name' onBlur={handleOnBlur} placeholder="Enter Name" />
                         </Form.Group>
+                        <div className="ractangle"></div>
                     <Form.Group id="email">
-                        <Form.Control type="email" name='email' placeholder="Email" onBlur={handleOnBlur}  required />
+                        <Form.Control className="inputBox" type="email" name='email' placeholder="Email" onBlur={handleOnBlur}  required />
                        
                     </Form.Group>
+                    <div className="ractangle"></div>
                     <Form.Group id="">
-                    <Form.Control type="number"  name='number' onBlur={handleOnBlur}  placeholder="Number" />
-                        </Form.Group>
-                    <Form.Group id="password">
-                        <Form.Control type="password" name='password' placeholder="Password"  onBlur={handleOnBlur} required />
+                    <Form.Control className="inputBox " type="number"  name='number' onBlur={handleOnBlur}  placeholder="Number" />
                     </Form.Group>
-                    <Button   className="w-100" type="submit">
+                    <div className="ractangle"></div>
+                    <Form.Group id="password">
+                        <Form.Control className="inputBox" type="password" name='password' placeholder="Password"  onBlur={handleOnBlur} required />
+                    </Form.Group>
+                    <div className="ractangle"></div>
+                    <Button   className="w-100 FrmBtnClr mt-2" type="submit">
                         Sign Up
                     </Button>
+                    <div className="d-flex justify-content-between">
+                        <div><h5>Referral Code</h5>
+                        </div>
+                        <div><h6>View Options</h6></div>
+                    </div>
+                    <p>Add a personalized gift note to your order</p>
                     <div className="w-100 text-center mt-2">
-                    Already have an account? <a onClick={() => setLoginForm(true)} style={{color:'blue', cursor: 'pointer'}}>Log In</a>
+                    Already have an account? <a className="signLoginClickBtn" onClick={() => setLoginForm(true)} style={{ cursor: 'pointer'}}>Log In</a>
                     { user.success && <p style={{color: 'green'}}>User Created successfully</p>}
                     <p style={{color: 'red'}}>{logginUser.error} </p>
                     </div>
                     </Form>
                     
                     }
+                   </div>
                     
                
         </div>
+  
+        
             </div>
             </div>
         

@@ -1,6 +1,6 @@
 {
-  "name": "demo-site",
-  "homepage": "https://sayemmomin.github.io/restuarent-service-site/",
+  "name": "restuarent-service-site",
+  "homepage": "https://sayemmomin.github.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

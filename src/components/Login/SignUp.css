@@ -1,0 +1,50 @@
+.signUpBody{
+    position: relative;
+    width: 1080px;
+    height: 675px;
+    /* background: #FFFFFF; */
+}
+.logo-margin{
+    margin-top: 67px;
+}
+.signupLogo{
+    height: 33px;
+    object-fit: cover;
+    width: 241px;
+}
+.signUpBtn{
+    width: 99px;
+    height: 40px;
+    left: 431px;
+    color: #FFFFFF;
+    background-color: #260F3B;
+    border-radius: 2px;
+}
+.findBtn, .FrmBtnClr{
+    background-color: #FBA922 !important;
+}
+.signLoginClickBtn{
+    color: #FBA922 !important;
+}
+.bg-frm-img{
+    background-image: url("../Images/signup-img.png");
+    background-repeat: no-repeat;
+    background-size: 463px;
+}
+.bg-frm{
+    background-color:#ffffff !important;
+    margin-right: 0px !important;
+}
+.inputBox{
+    padding: 70px 0px 10px 2px !important;
+    border-style: none !important;
+    outline: none !important;
+}
+
+.ractangle{
+    background-color: #8E8E8E;
+    height: 1px;
+}
+.zIndex{
+    z-index: 1;
+}
